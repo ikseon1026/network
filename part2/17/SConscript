@@ -1,0 +1,16 @@
+import os
+Import('env')
+
+VariantDir('build', '.', duplicate=0)
+
+env.Program(['build/1.c'])
+env.Program(['build/2.c', 'build/ethernet.c'])
+env.Program(['build/3.c', 'build/arp.c'])
+env.Program(['build/4.c', 'build/ip.c'])
+env.Program(['build/5.c', 'build/tcp.c'])
+env.Program(['build/6.c', 'build/udp.c'])
+env.Program(['build/7.c', 'build/icmp.c'])
+
+if(os.name != 'nt'):
+	env.Program(['build/8.c', 'build/ethernet.c', 'build/arp.c', 'build/ip.c', 'build/tcp.c', 'build/udp.c', 'build/icmp.c'])
+env.Program(['build/9.c', 'build/ethernet.c', 'build/arp.c', 'build/ip.c', 'build/tcp.c', 'build/udp.c', 'build/icmp.c'])

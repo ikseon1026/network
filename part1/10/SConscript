@@ -1,0 +1,21 @@
+import os
+Import('env')
+
+VariantDir('build', '.', duplicate=0)
+
+source_list = ['1.c', '2.c', '3.c']
+
+env.Library('mycal', ['cal.c'])
+
+for file in source_list:
+	total_source = []
+	total_source.append('build/'+file)
+
+	if(file == '3.c'):
+		env.Program('build/3.c', LIBS=['mycal'], LIBPATH=['./'])
+		continue
+
+	if(file == '2.c'):
+		total_source.append('build/cal.c')
+
+	env.Program(total_source)

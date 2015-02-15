@@ -1,0 +1,13 @@
+import os
+Import('env')
+
+VariantDir('build', '.', duplicate=0)
+
+linux_examples = ['1.c', '2.c']
+
+for root, dirs, files in os.walk('./'):
+	for file in files:
+		if((len(file) - 2) == (file.find('.c'))):
+			if(os.name == 'nt' and file in linux_examples):
+				continue
+			env.Program('build/'+file)

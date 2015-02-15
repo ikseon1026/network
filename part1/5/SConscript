@@ -1,0 +1,9 @@
+import os
+Import('env')
+
+VariantDir('build', '.', duplicate=0)
+
+for root, dirs, files in os.walk('./'):
+	for file in files:
+		if((len(file) - 2) == (file.find('.c'))):
+			env.Program('build/'+file)

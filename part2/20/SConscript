@@ -1,0 +1,15 @@
+import os
+Import('env')
+
+VariantDir('build', '.', duplicate=0)
+
+env.Program(['build/1.c', 'build/icmplib.c'])
+
+if(os.name != 'nt'):
+	env.Program(['build/2.c', 'build/icmplib.c'])
+	env.Program(['build/4.c', 'build/icmplib.c'])
+	env.Program(['build/6.c', 'build/icmplib.c'])
+
+env.Program(['build/3.c', 'build/icmplib.c'])
+env.Program(['build/5.c', 'build/icmplib.c'])
+env.Program(['build/7.c', 'build/icmplib.c'])

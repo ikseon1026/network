@@ -1,0 +1,14 @@
+import os
+Import('env')
+
+VariantDir('build', '.', duplicate=0)
+
+env.Program('build/1.c')
+env.Program('build/2.c')
+env.Program('build/3.c')
+env.Program(['build/4.c', 'build/tcplib.c'])
+
+if(os.name != 'nt'):
+	env.Program(['build/5.c', 'build/tcplib.c'])
+
+env.Program(['build/6.c', 'build/tcplib.c'])

@@ -1,0 +1,12 @@
+Import('env')
+
+SConscript('1/SConscript', exports = ['env'])
+SConscript('2/SConscript', exports = ['env'])
+SConscript('3/SConscript', exports = ['env'])
+SConscript('4/SConscript', exports = ['env'])
+SConscript('5/SConscript', exports = ['env'])
+SConscript('6/SConscript', exports = ['env'])
+SConscript('7/SConscript', exports = ['env'])
+SConscript('8/SConscript', exports = ['env'])
+SConscript('9/SConscript', exports = ['env'])
+SConscript('10/SConscript', exports = ['env'])

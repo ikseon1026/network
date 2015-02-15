@@ -1,0 +1,11 @@
+import os
+Import('env')
+
+VariantDir('build', '.', duplicate=0)
+VariantDir('build/lib', '../18/', duplicate=0)
+
+env.Program(['build/1.c', 'build/lib/arplib.c'])
+
+if(os.name != 'nt'):
+	env.Program(['build/2.c', 'build/lib/arplib.c'])
+env.Program(['build/3.c', 'build/lib/arplib.c'])
