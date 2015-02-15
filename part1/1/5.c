@@ -10,7 +10,7 @@ int main(void)
 	printf("a %% 100 : %d\n", a%100);
 	printf("a %% 50 : %d\n", a%50);
 
-	printf("RAND_MAX : %d\n", RAND_MAX);
+	printf("RAND_MAX : %u\n", RAND_MAX);
 		
 	return 0;
 }				
