@@ -1,0 +1,39 @@
+#-*- coding: utf-8 -*-
+import os
+Import('env')
+
+#######################################################
+
+## 아래의 두개의 변수에 값을 입력해야 합니다. ##
+
+pcap_header_path = 'C:\\WpdPack_4_1_2\\WpdPack\\Include'
+pcap_lib_path = 'C:\\WpdPack_4_1_2\\WpdPack\\Lib\\x64'
+
+#######################################################
+
+if (os.name == 'nt' and pcap_header_path == ''): 
+	print('>> pcap_header_path is not defined <<')
+	exit(0)
+
+if(os.name == 'nt' and pcap_lib_path == ''):
+	print('>> pcap_lib_path is not defined <<')
+	exit(0)
+
+env.Append(CPPFLAGS=['-I./part2/18', '-I./part2/21'])
+
+if os.name == 'nt':
+   env.Append(CPPFLAGS= ['-DWIN32','-I'+pcap_header_path])
+   env.Append(LIBPATH = [pcap_lib_path], LIBS = ['ws2_32', 'wpcap'])
+else:
+   env.Append(LIBS = ['pcap', 'pthread'])
+
+SConscript('13/SConscript', exports = ['env'])
+SConscript('14/SConscript', exports = ['env'])
+SConscript('15/SConscript', exports = ['env'])
+SConscript('16/SConscript', exports = ['env'])
+SConscript('17/SConscript', exports = ['env'])
+SConscript('18/SConscript', exports = ['env'])
+SConscript('19/SConscript', exports = ['env'])
+SConscript('20/SConscript', exports = ['env'])
+SConscript('21/SConscript', exports = ['env'])
+SConscript('22/SConscript', exports = ['env'])
