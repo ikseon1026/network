@@ -24,10 +24,10 @@ void print2hex(const char *msg, void *p, size_t len)
 {
 	size_t i;
 
-	printf("%s : ", msg);
+	printf("%s :\n", msg);
 		
 	for(i = 0; i < len; i += 1) {
-		printf("[%p]%x ", ((char*)p+i), *((char *)p+i));	
+		printf("%p=%x ", ((char*)p+i), *((char *)p+i));	
 	}
 	printf("\n");
 }
