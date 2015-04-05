@@ -89,7 +89,7 @@ int main(int argc, char **argv)
 				strcpy(str_sip, inet_ntoa(ip->ip_src));
 				strcpy(str_dip, inet_ntoa(ip->ip_dst));
 
-				printf("%s:%d -> %s:%d "\
+				printf("%s:%d->%s:%d "\
 					"(seq : %u, flags : %s, len : %d)\n", 
 					str_sip, ntohs(tcphdr->th_sport),
 					str_dip, ntohs(tcphdr->th_dport), 
