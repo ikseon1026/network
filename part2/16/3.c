@@ -16,7 +16,7 @@ int main(void)
    
 	for(d=alldevs; d; d=d->next)
 	{
-		printf("0x%p : %d. %s",d, ++i, d->name);
+		printf("%p : %d. %s",d, ++i, d->name);
 
 		if(d->description) printf(" (%s)", d->description);
 		printf("\n");
