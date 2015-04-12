@@ -13,6 +13,10 @@ int main(void)
 		printf("pcap_findalldevs error\n");
 		return 1;
 	}
+
+	if(!alldevs) {
+		printf("%s\n", errbuf);
+	}
    
 	for(d=alldevs; d; d=d->next)
 	{
