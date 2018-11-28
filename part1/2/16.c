@@ -7,7 +7,7 @@ int main(void)
 
 #ifdef VERSION
 	#if VERSION > 2
-		printf("VESION > 2\n");
+		printf("VERSION > 2\n");
 	#else
 		printf("VERSION : %d\n", VERSION);
 	#endif
