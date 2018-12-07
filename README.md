@@ -25,9 +25,9 @@
 
 ### 윈도우
 
-> - VisualStudio - http://www.visualstudio.com/downloads/
-> - Python - http://www.python.org/downloads/ 
-> - Scons - http://www.scons.com/download.php
+> - VisualStudio - https://www.visualstudio.com/downloads/
+> - Python - https://www.python.org/downloads/
+> - Scons - https://www.scons.org/
 
 위의 프로그램을 설치한 뒤에 Winpcap Driver를 다운로드 받아 설치하고 Winpcap Developer's Pack을 다운로드 받은 뒤에 압축을 해제 하면 된다. 
 
