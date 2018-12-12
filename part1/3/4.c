@@ -18,7 +18,7 @@ int main(void)
 	printf("struct data : %lu\n", (unsigned long)sizeof(struct data));
 
 	printf("a.a : %d\n", a.a);
-	printf("a.b : %d\n", a.c);
+	printf("a.b : %d\n", a.b);
 	printf("a.c : %d\n", a.c);
 
 	return 0;
