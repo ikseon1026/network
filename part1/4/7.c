@@ -16,7 +16,7 @@ int main(void)
 	printf("&ap : %p\n", &ap);
 	printf("&app : %p\n", &app);
 	printf("ap-1 : %p, ap : %p, ap+1 : %p\n", ap-1, ap, ap+1);
-	printf("app-1 : %p, app : %p, ap+1 : %p\n", app-1, app, app+1);
+	printf("app-1 : %p, app : %p, app+1 : %p\n", app-1, app, app+1);
 
 	printf("b size : %lu\n", (unsigned long)sizeof(b));
 	printf("bp size : %lu\n", (unsigned long)sizeof(bp));
